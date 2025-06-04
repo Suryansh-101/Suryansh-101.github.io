@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --secondary-color: #6366f1;
+            --background-color: #f9fafb;
+            --text-color: #374151;
+            --accent-color: #2563eb;
+            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-family);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+            position: relative;
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            margin: 0 0 0.25rem;
+            font-size: 2.8rem;
+            letter-spacing: 1.2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #e0e7ff;
+            margin-top: 0;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #c7d2fe;
+        }
+
+        main {
+            max-width: 900px;
+            padding: 2rem 1rem 4rem;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 0.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            font-size: 2rem;
+        }
+
+        .about-content,
+        .education-item,
+        .project-item {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .about-content:hover,
+        .education-item:hover,
+        .project-item:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-content {
+            line-height: 1.7;
+        }
+
+        .about-content p {
+            margin: 0 0 1rem;
+            color: #555;
+        }
+
+        .about-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 1.5rem;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 0.6rem 1rem;
+            border-radius: 25px;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            user-select: none;
+            box-shadow: 0 2px 6px rgba(79, 70, 229, 0.3);
+        }
+
+        .education-item h3,
+        .project-item h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .education-item p,
+        .project-item p {
+            margin: 0;
+            color: #555;
+        }
+
+        .links a {
+            display: inline-block;
+            margin-right: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+
+        .links a:hover {
+            border-color: var(--accent-color);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: var(--secondary-color);
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            user-select: none;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                margin: 0 0.5rem;
+                font-size: 1rem;
+            }
+
+            .about-highlights {
+                gap: 10px;
+            }
+
+            .highlight {
+                font-size: 0.85rem;
+                padding: 0.5rem 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="C:\my-website\my-profile-pic.png" alt="Profile Picture" />
+        <h1>Suryansh Anand</h1>
+        <p>AI/ML Enthusiast | Generative AI Creator | Practical Problem-Solver | Project-Driven Learner</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#links">Links</a>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>I’m passionate about building intelligent solutions that solve real-world problems. From developing web scrapers to creating currency converters, I work with Python, C, APIs, and Streamlit to turn ideas into interactive tools.</p>
+                
+                <p>Alongside my technical skills, I bring strong soft skills in communication, leadership, public speaking, and teamwork. I enjoy sharing ideas, presenting concepts, and learning through collaboration.</p>
+                
+                <p>I believe in continuous learning, applying knowledge in practical ways, and growing through every challenge. I'm here to build, learn, and contribute meaningfully to the evolving world of technology.</p>
+                
+                <div class="about-highlights">
+                    <div class="highlight">Problem Solver</div>
+                    <div class="highlight">AI Researcher</div>
+                    <div class="highlight">Machine Learning</div>
+                    <div class="highlight">Continuous Learner</div>
+                    <div class="highlight">Innovation Driven</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>B.Tech CSE Specialization in AI and ML</h3>
+                <p>SRI SRI UNIVERSITY — 2024-2028</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <div class="skill">Artificial Intelligence</div>
+                <div class="skill">Generative AI</div>
+                <div class="skill">Machine Learning</div>
+                <div class="skill">C (Programming Language)</div>
+                <div class="skill">Python</div>
+                <div class="skill">Git & GitHub</div>
+                <div class="skill">Web Scraping</div>
+                <div class="skill">Neural Networks</div>
+                <div class="skill">Data Structures and Algorithms</div>
+                <div class="skill">Streamlit</div>
+                <div class="skill">Internet Of Things</div>
+                <div class="skill">Design Thinking</div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <h3>Currency Converter with GUI</h3>
+                <p>A user-friendly currency converter application built using Streamlit. This tool allows users to convert between different currencies using real-time exchange rates, providing an intuitive interface for quick conversions.</p>
+                <a href="https://github.com/Suryansh-101/currency-converter" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+            <div class="project-item">
+                <h3>Web Scraper Tool</h3>
+                <p>A powerful web scraper tool that extracts links and images from websites. Built with Streamlit, this application provides a simple GUI for users to input URLs and retrieve valuable data effortlessly.</p>
+                <a href="https://github.com/Suryansh-101/web-scraper" target="_blank" rel="noopener">View on GitHub</a>
+        </section>
+
+        <section id="links" class="links">
+            <h2>Links</h2>
+            <a href="https://github.com/Suryansh-101" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/suryansh-anand" rel="noopener">LinkedIn</a>
+            <a href="mailto:suryanshanand2210@gmail.com">Email</a>
+        </section>
+    </main>
+</body>
+</html>
