@@ -3,276 +3,121 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My Portfolio</title>
-    <style>
-        :root {
-            --primary-color: #4f46e5;
-            --secondary-color: #6366f1;
-            --background-color: #f9fafb;
-            --text-color: #374151;
-            --accent-color: #2563eb;
-            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+    <meta name="description" content="Suryansh Anand's personal portfolio showcasing projects and skills in AI, Machine Learning, and software development." />
+    <meta name="keywords" content="Suryansh Anand, Portfolio, AI, Machine Learning, Python, Developer" />
+    
+    <title>Suryansh Anand | AI/ML Developer</title>
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-        * {
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="style.css" />
 
-        body {
-            margin: 0;
-            font-family: var(--font-family);
-            background-color: var(--background-color);
-            color: var(--text-color);
-            scroll-behavior: smooth;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 4rem 1rem;
-            text-align: center;
-            position: relative;
-        }
-
-        header img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 4px solid white;
-            object-fit: cover;
-            margin-bottom: 1rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
-
-        header h1 {
-            margin: 0 0 0.25rem;
-            font-size: 2.8rem;
-            letter-spacing: 1.2px;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            color: #e0e7ff;
-            margin-top: 0;
-        }
-
-        nav {
-            margin-top: 1rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 1.5rem;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: color 0.3s ease-in-out;
-        }
-
-        nav a:hover {
-            color: #c7d2fe;
-        }
-
-        main {
-            max-width: 900px;
-            padding: 2rem 1rem 4rem;
-            margin: 0 auto;
-        }
-
-        section {
-            margin-bottom: 4rem;
-        }
-
-        h2 {
-            border-bottom: 3px solid var(--accent-color);
-            padding-bottom: 0.3rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary-color);
-            font-size: 2rem;
-        }
-
-        .about-content,
-        .education-item,
-        .project-item {
-            background: white;
-            border-radius: 10px;
-            padding: 1.5rem 1.5rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            margin-bottom: 1.5rem;
-            transition: box-shadow 0.3s ease;
-        }
-
-        .about-content:hover,
-        .education-item:hover,
-        .project-item:hover {
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .about-content {
-            line-height: 1.7;
-        }
-
-        .about-content p {
-            margin: 0 0 1rem;
-            color: #555;
-        }
-
-        .about-highlights {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 1.5rem;
-        }
-
-        .highlight {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            padding: 0.6rem 1rem;
-            border-radius: 25px;
-            color: white;
-            font-weight: 600;
-            font-size: 0.9rem;
-            user-select: none;
-            box-shadow: 0 2px 6px rgba(79, 70, 229, 0.3);
-        }
-
-        .education-item h3,
-        .project-item h3 {
-            margin: 0 0 0.5rem;
-            font-size: 1.5rem;
-        }
-
-        .education-item p,
-        .project-item p {
-            margin: 0;
-            color: #555;
-        }
-
-        .links a {
-            display: inline-block;
-            margin-right: 1rem;
-            margin-bottom: 0.5rem;
-            color: var(--accent-color);
-            font-weight: 600;
-            text-decoration: none;
-            border-bottom: 2px solid transparent;
-            transition: border-color 0.2s ease;
-        }
-
-        .links a:hover {
-            border-color: var(--accent-color);
-        }
-
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill {
-            background: var(--secondary-color);
-            padding: 0.4rem 0.9rem;
-            border-radius: 20px;
-            color: white;
-            font-weight: 600;
-            font-size: 0.9rem;
-            user-select: none;
-        }
-
-        @media (max-width: 600px) {
-            nav a {
-                margin: 0 0.5rem;
-                font-size: 1rem;
-            }
-
-            .about-highlights {
-                gap: 10px;
-            }
-
-            .highlight {
-                font-size: 0.85rem;
-                padding: 0.5rem 0.8rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <header>
-        <img src="my-profile-pic.png" alt="Profile Picture" style="width: 150px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.2);" />
-        <h1>Suryansh Anand</h1>
-        <p>AI/ML Enthusiast | Generative AI Creator | Practical Problem-Solver | Project-Driven Learner</p>
-        <nav>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+        </div>
+
+        <img src="my-profile-pic.png" alt="Profile Picture of Suryansh Anand" data-aos="fade-down" />
+        <h1 data-aos="fade-up" data-aos-delay="100">Suryansh Anand</h1>
+        <p data-aos="fade-up" data-aos-delay="200">AI/ML Enthusiast | Generative AI Creator | Practical Problem-Solver</p>
+        <nav data-aos="fade-up" data-aos-delay="300">
             <a href="#about">About</a>
             <a href="#education">Education</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#links">Links</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
+
     <main>
-        <section id="about">
-            <h2>About Me</h2>
+        <section id="about" data-aos="fade-right">
+            <h2><i class="fas fa-user-circle"></i> About Me</h2>
             <div class="about-content">
                 <p>I’m passionate about building intelligent solutions that solve real-world problems. From developing web scrapers to creating currency converters, I work with Python, C, APIs, and Streamlit to turn ideas into interactive tools.</p>
-                
-                <p>Alongside my technical skills, I bring strong soft skills in communication, leadership, public speaking, and teamwork. I enjoy sharing ideas, presenting concepts, and learning through collaboration.</p>
-                
                 <p>I believe in continuous learning, applying knowledge in practical ways, and growing through every challenge. I'm here to build, learn, and contribute meaningfully to the evolving world of technology.</p>
-                
                 <div class="about-highlights">
                     <div class="highlight">Problem Solver</div>
                     <div class="highlight">AI Researcher</div>
                     <div class="highlight">Machine Learning</div>
                     <div class="highlight">Continuous Learner</div>
-                    <div class="highlight">Innovation Driven</div>
                 </div>
             </div>
         </section>
 
-        <section id="education">
-            <h2>Education</h2>
+        <section id="education" data-aos="fade-left">
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
             <div class="education-item">
-                <h3>B.Tech CSE Specialization in AI and ML</h3>
-                <p>SRI SRI UNIVERSITY — 2024-2028</p>
+                <h3>B.Tech CSE - Specialization in AI and ML</h3>
+                <p><strong>SRI SRI UNIVERSITY</strong> — 2024-2028</p>
             </div>
         </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
+        <section id="skills" data-aos="fade-right">
+            <h2><i class="fas fa-cogs"></i> Skills</h2>
             <div class="skills-list">
                 <div class="skill">Artificial Intelligence</div>
                 <div class="skill">Generative AI</div>
                 <div class="skill">Machine Learning</div>
-                <div class="skill">C (Programming Language)</div>
                 <div class="skill">Python</div>
+                <div class="skill">C Language</div>
                 <div class="skill">Git & GitHub</div>
                 <div class="skill">Web Scraping</div>
                 <div class="skill">Neural Networks</div>
-                <div class="skill">Data Structures and Algorithms</div>
+                <div class="skill">DSA</div>
                 <div class="skill">Streamlit</div>
-                <div class="skill">Internet Of Things</div>
-                <div class="skill">Design Thinking</div>
+                <div class="skill">IoT</div>
             </div>
         </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
+        <section id="projects" data-aos="fade-left">
+            <h2><i class="fas fa-project-diagram"></i> Projects</h2>
             <div class="project-item">
                 <h3>Currency Converter with GUI</h3>
-                <p>A user-friendly currency converter application built using Streamlit. This tool allows users to convert between different currencies using real-time exchange rates, providing an intuitive interface for quick conversions.</p>
-                <a href="https://github.com/Suryansh-101/currency-converter" target="_blank" rel="noopener">View on GitHub</a>
+                <p>A user-friendly currency converter built with Streamlit that uses real-time exchange rates.</p>
+                <div class="tech-stack">
+                    <span>Python</span><span>Streamlit</span><span>API</span>
+                </div>
+                <a href="https://github.com/Suryansh-101/currency-converter" target="_blank" rel="noopener">View on GitHub <i class="fas fa-external-link-alt"></i></a>
             </div>
             <div class="project-item">
                 <h3>Web Scraper Tool</h3>
-                <p>A powerful web scraper tool that extracts links and images from websites. Built with Streamlit, this application provides a simple GUI for users to input URLs and retrieve valuable data effortlessly.</p>
-                <a href="https://github.com/Suryansh-101/web-scraper" target="_blank" rel="noopener">View on GitHub</a>
-        </section>
+                <p>A tool to extract links and images from websites, built with a simple Streamlit GUI.</p>
+                <div class="tech-stack">
+                    <span>Python</span><span>Streamlit</span><span>BeautifulSoup</span>
+                </div>
+                <a href="https://github.com/Suryansh-101/web-scraper" target="_blank" rel="noopener">View on GitHub <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            </section>
 
-        <section id="links" class="links">
-            <h2>Links</h2>
-            <a href="https://github.com/Suryansh-101" rel="noopener">GitHub</a>
-            <a href="https://www.linkedin.com/in/suryansh-anand" rel="noopener">LinkedIn</a>
-            <a href="mailto:suryanshanand2210@gmail.com">Email</a>
+        <section id="certifications" data-aos="fade-right">
+            <h2><i class="fas fa-certificate"></i> Certifications</h2>
+            <div class="cert-item">
+                <h3>CLA - Programming Essentials in C</h3>
+                <p><strong>Issued by:</strong> Alison - Feb 2025</p>
+                <a href="https://alison.com/certification/check/871c3008e1" target="_blank" rel="noopener">View Credential <i class="fas fa-external-link-alt"></i></a>
+            </div>
+             </section>
+
+        <section id="contact" class="contact-links" data-aos="fade-up">
+            <h2><i class="fas fa-link"></i> Get in Touch</h2>
+            <a href="https://github.com/Suryansh-101" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/suryansh-anand" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="mailto:suryanshanand2210@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i> Email</a>
         </section>
     </main>
+
+    <button id="back-to-top" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
